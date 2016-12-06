@@ -8,3 +8,5 @@
  Author URI: https://dmoran.co
  License: GPL2
  */
+
+require_once('cpt-before-after.php');
