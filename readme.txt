@@ -1,8 +1,9 @@
 == Changelog ==
 
 = 0.4 =
-* Deliverable change: remove case from slug
-* Add settings page
+* Create new shortcode
+* Remove custom post type (no longer used)
+* Remove custom taxonomy (no longer used)
 
 = 0.3 =
 * Enqueue scripts for magnific popup
