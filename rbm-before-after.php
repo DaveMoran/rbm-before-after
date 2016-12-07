@@ -10,7 +10,7 @@
  */
 
 // require_once('cpt-before-after.php');
-require_once('custom-template.php');
+// require_once('custom-template.php');
 require_once('shortcode.php');
 
 // Register magnific popup scripts
