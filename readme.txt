@@ -1,5 +1,9 @@
 == Changelog ==
 
+= 0.5 =
+* Create settings page
+* Only enqueue scripts if checked
+
 = 0.4 =
 * Create new shortcode
 * Remove custom post type (no longer used)
