@@ -1,5 +1,9 @@
 == Changelog ==
 
+= 0.4 =
+* Deliverable change: remove case from slug
+* Add settings page
+
 = 0.3 =
 * Enqueue scripts for magnific popup
 * Add script logic at bottom of template

@@ -59,6 +59,9 @@
     $('.gallery-wrapper').magnificPopup({
       delegate: 'a', // child items selector, by clicking on it popup will open
       type: 'image',
+      gallery: {
+        enabled: true
+      },
       image: {
         titleSrc: function(item) {
           if(item.el.children('img').attr('alt').length > 0) {

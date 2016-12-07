@@ -11,6 +11,7 @@
 
 require_once('cpt-before-after.php');
 require_once('custom-template.php');
+require_once('settings.php');
 
 // Register magnific popup scripts
 
