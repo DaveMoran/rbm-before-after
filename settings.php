@@ -13,8 +13,29 @@ function rbm_plugin_settings(){
 		'scripts_settings_callback',
 		'general'
 	);
+
+	//Step 3: Introduce the field to toggle enqueueing the scripts
+	add_settings_field(
+		'magnific_scripts',
+		'Magnific Scripts & Styles',
+		'magnific_toggle_callback',
+		'general',
+		'scripts_settings_section',
+		array(
+			'Activate this setting to enqueue Magnific Popup'
+		)
+	);
 }
 
+// Step 2: Create callback for custom section
 function scripts_settings_callback() {
-	echo "<h1>Hello World!</h1>";
+	echo "<p>Select which scripts you wish to enqueue.<br>";
+	echo "<strong>Note:</strong> These are disabled by default.</p>";
+}
+
+// Step 4: Create callback for custom field
+function magnific_toggle_callback( $args ) {
+	$html = '<input type="checkbox" id="magnific_scripts" name="enqueue_magnificmagnific_scripts" value="1" ' . checked(1, get_option('magnific_scripts'), false) . '/>';
+	$html .= '<label for="magnific_scripts">' . $args[0] . '</label>';
+	echo $html;
 }
