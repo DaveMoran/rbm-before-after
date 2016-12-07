@@ -16,13 +16,10 @@ function rbm_gallery_shortcode($atts) {
   ob_start(); ?>
     <div class="gallery-wrapper">
       <?php foreach($photos as $photo){
-        $imageThumb = wp_get_attachment_image($photo, 'medium', "");
-        $imageFullLink = wp_get_attachment_image_src($photo, 'full');
-        ?>
-
-          <a href="<?php echo $imageFullLink[0]; ?>" class="gallery-item"><?php echo $imageThumb; ?></a>
-       <?php } ?>
-      <p>Photos: <?php print_r($photos); ?>, Title: <?php echo $title; ?></p>
+        $imageThumb = wp_get_attachment_image($photo, 'thumbnail', "");
+        $imageFullLink = wp_get_attachment_image_src($photo, 'full'); ?>
+        <a href="<?php echo $imageFullLink[0]; ?>" class="gallery-item"><?php echo $imageThumb; ?></a> <?php
+      } ?>
     </div> <?php
     $output = ob_get_clean();
   return $output;
