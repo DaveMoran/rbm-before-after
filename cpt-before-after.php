@@ -6,7 +6,7 @@
 add_action('init', 'create_rbm_before_after');
 
 register_deactivation_hook( __FILE__, 'flush_rewrite_rules' );
-register_activation_hook(__FILE__, 'create_rbm_staff');
+register_activation_hook(__FILE__, 'create_rbm_before_after');
 
 function create_rbm_before_after() {
   register_post_type( 'rbm_before_after',
@@ -36,18 +36,18 @@ function create_rbm_before_after() {
         'title',
         'thumbnail',
       ),
-      'taxonomies' => array('rbm_gallery'),
+      'taxonomies' => array('rbm-gallery'),
       'menu_icon' => 'dashicons-arrow-up-alt2',
       'has_archive' => true
     )
   );
   flush_rewrite_rules();
 }
-// hook into the init action and call create_book_taxonomies when it fires
-add_action( 'init', 'create_book_taxonomies', 0 );
+// hook into the init action and call create_gallery_taxonomies when it fires
+add_action( 'init', 'create_gallery_taxonomies', 0 );
 
-// create two taxonomies, genres and writers for the post type "book"
-function create_book_taxonomies() {
+// create two taxonomies, genres and writers for the post type "rbm_before_after"
+function create_gallery_taxonomies() {
 	// Add new taxonomy, make it hierarchical (like categories)
 	$labels = array(
 		'name'              => _x( 'Galleries', 'taxonomy general name', 'textdomain' ),
@@ -72,6 +72,6 @@ function create_book_taxonomies() {
 		'rewrite'           => array( 'slug' => 'gallery' ),
 	);
 
-	register_taxonomy( 'rbm_gallery', array( 'rbm_before_after' ), $args );
+	register_taxonomy( 'rbm-gallery', array( 'rbm_before_after' ), $args );
 }
 ?>
