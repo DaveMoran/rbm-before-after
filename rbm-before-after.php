@@ -9,7 +9,7 @@
  License: GPL2
  */
 
-require_once('cpt-before-after.php');
+// require_once('cpt-before-after.php');
 require_once('custom-template.php');
 require_once('shortcode.php');
 
