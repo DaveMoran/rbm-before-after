@@ -14,3 +14,7 @@ function rbm_plugin_settings(){
 		'general'
 	);
 }
+
+function scripts_settings_callback() {
+	echo "<h1>Hello World!</h1>";
+}
