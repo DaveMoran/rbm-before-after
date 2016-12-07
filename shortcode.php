@@ -14,6 +14,7 @@ function rbm_gallery_shortcode($atts) {
   $title = $args['title'];
 
   ob_start(); ?>
+    <div class="gallery-title"><?php echo $title; ?></div>
     <div class="gallery-wrapper">
       <?php foreach($photos as $photo){
         $imageThumb = wp_get_attachment_image($photo, 'thumbnail', "");
