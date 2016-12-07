@@ -54,4 +54,14 @@
    </div>
  </div>
 
-<?php get_footer(); ?>
+ <script>
+  jQuery(document).ready(function($){
+    $('.gallery-wrapper').magnificPopup({
+      delegate: 'a', // child items selector, by clicking on it popup will open
+      type: 'image'
+      // other options
+    });
+  });
+ </script>
+
+<?php get_footer();
