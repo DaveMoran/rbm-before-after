@@ -25,7 +25,7 @@
              <?php if (have_posts()) : ?>
                <div class="gallery-wrapper">
              <?php while (have_posts()) : the_post(); ?>
-                 <a class="gallery-item" href="<?php the_post_thumbnail_url('full')?>">
+                 <a class="gallery-item" href="<?php the_post_thumbnail_url('full')?>" title="test">
                    <?php the_post_thumbnail('medium'); ?>
                  </a>
              <?php endwhile; ?>
@@ -58,8 +58,16 @@
   jQuery(document).ready(function($){
     $('.gallery-wrapper').magnificPopup({
       delegate: 'a', // child items selector, by clicking on it popup will open
-      type: 'image'
-      // other options
+      type: 'image',
+      image: {
+        titleSrc: function(item) {
+          if(item.el.children('img').attr('alt').length > 0) {
+            return item.el.children('img').attr('alt');
+          } else {
+            return "";
+          }
+        }
+      }
     });
   });
  </script>
