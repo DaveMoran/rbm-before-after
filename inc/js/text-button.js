@@ -9,7 +9,24 @@
           text: "RBM Gallery",
           value: '[rbm-gallery photos="" title="" thumbnail="thumbnail" columns="2"]',
           onclick: function() {
-            editor.insertContent(this.value());
+            editor.windowManager.open( {
+              title: 'Insert RBM Gallery',
+              body: [
+                {
+                  type: 'textbox',
+                  name: 'title',
+                  label: 'Your Title'
+                },
+                {
+                  type: "textbox",
+                  name: "columns",
+                  label: "Columns"
+                }
+              ],
+              onsubmit: function(e) {
+                editor.insertContent('[rbm-gallery photos="" title="' + e.data.title + '" thumbnail="thumbnail" columns="' + e.data.columns + '"]');
+              }
+            })
           }
         }
       ]
