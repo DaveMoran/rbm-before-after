@@ -1,11 +1,18 @@
 (function() {
   tinymce.PluginManager.add('rbm_tc_button', function( editor, url) {
     editor.addButton('rbm_tc_button', {
-      text: "My test button",
-      icon: false,
-      onclick: function() {
-        editor.insertContent('Hello World!');
-      }
+      text: "",
+      type: "menubutton",
+      icon: 'wp_code',
+      menu: [
+        {
+          text: "RBM Gallery",
+          value: '[rbm-gallery photos="" title="" thumbnail="thumbnail" columns="2"]',
+          onclick: function() {
+            editor.insertContent(this.value());
+          }
+        }
+      ]
     });
   });
 })();
