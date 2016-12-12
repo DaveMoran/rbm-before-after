@@ -1,5 +1,9 @@
 == Changelog ==
 
+= 1.0 =
+* Launch Version
+* Add shortcode biulder to WYSIWIG editor
+
 = 0.7 =
 * Add ability to select number of columns for gallery
 * Support for 1-12 columns

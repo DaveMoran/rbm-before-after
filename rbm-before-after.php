@@ -3,8 +3,8 @@
  Plugin Name: RBM Before After
  Plugin URI: http://reachbeyondmarketing.com
  Description: A plugin to display before and after photos in an easier manner
- Version: 0.7
- Author: Dave M
+ Version: 1.0
+ Author: Dave Moran
  Author URI: https://dmoran.co
  License: GPL2
  */
