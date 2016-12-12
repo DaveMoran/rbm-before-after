@@ -21,10 +21,20 @@
                   type: "textbox",
                   name: "columns",
                   label: "Columns"
+                },
+                {
+                  type: 'listbox',
+                  name: 'thumbnail',
+                  label: 'Thumbnail Size',
+                  'values': [
+                    {text: 'Thumbnail', value: 'thumbnail'},
+                    {text: 'Medium', value: 'medium'},
+                    {text: 'Large', value: 'large'},
+                  ]
                 }
               ],
               onsubmit: function(e) {
-                editor.insertContent('[rbm-gallery photos="" title="' + e.data.title + '" thumbnail="thumbnail" columns="' + e.data.columns + '"]');
+                editor.insertContent('[rbm-gallery title="' + e.data.title + '" columns="' + e.data.columns + '" thumbnail="' + e.data.thumbnail + '" photos=""]');
               }
             })
           }
