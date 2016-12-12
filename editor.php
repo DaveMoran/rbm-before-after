@@ -18,7 +18,7 @@ function rbm_add_button() {
   // Check if WYSIWYG is enabled
   if( get_user_option('rich_editing') == 'true') {
     add_filter('mce_external_plugins', 'rbm_add_tinymce_plugin');
-    add_filter('mce_buttons', 'rbm_register_button');
+    add_filter('mce_buttons_2', 'rbm_register_button');
   }
 }
 

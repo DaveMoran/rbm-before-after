@@ -30,6 +30,14 @@
                     {text: 'Medium', value: 'medium'},
                     {text: 'Large', value: 'large'},
                   ]
+                },
+                {
+                  type: 'button',
+                  text: 'Add Images',
+                  name: 'images',
+                  onclick: function(){
+                    alert("Hello");
+                  }
                 }
               ],
               onsubmit: function(e) {
