@@ -17,7 +17,7 @@ function rbm_gallery_shortcode($atts) {
     <div class="gallery-title"><?php echo $title; ?></div>
     <div class="gallery-wrapper">
       <?php foreach($photos as $photo){
-        $imageThumb = wp_get_attachment_image($photo, 'thumbnail', "");
+        $imageThumb = wp_get_attachment_image($photo, 'medium', "");
         $imageFullLink = wp_get_attachment_image_src($photo, 'full'); ?>
         <a href="<?php echo $imageFullLink[0]; ?>" class="gallery-item"><?php echo $imageThumb; ?></a> <?php
       } ?>
