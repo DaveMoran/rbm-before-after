@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 0.6 =
+* Add setting to change thumbnail size
+
 = 0.5 =
 * Create settings page
 * Only enqueue scripts if checked
