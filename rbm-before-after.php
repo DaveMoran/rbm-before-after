@@ -12,3 +12,4 @@
 require_once('shortcode.php');
 require_once('scripts.php');
 require_once('settings.php');
+require_once('editor.php');
