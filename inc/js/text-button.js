@@ -7,7 +7,6 @@
       menu: [
         {
           text: "RBM Gallery",
-          value: '[rbm-gallery photos="" title="" thumbnail="thumbnail" columns="2"]',
           onclick: function() {
             editor.windowManager.open( {
               title: 'Insert RBM Gallery',
