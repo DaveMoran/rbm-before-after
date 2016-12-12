@@ -35,13 +35,39 @@
                   type: 'button',
                   text: 'Add Images',
                   name: 'images',
-                  onclick: function(){
-                    alert("Hello");
+                  onclick: function(event){
+                    event.preventDefault();
+
+                    frame = wp.media({
+                      title: "Select an image",
+                      button: {
+                        text: "Use Images"
+                      },
+                      multiple: true
+                    });
+
+                    frame.on( 'select', function() {
+                      var attachment = frame.state().get('selection').toJSON();
+                      var imageIds = new Array();
+                      for(let i = 0; i < attachment.length; i++){
+                        imageIds.push(attachment[i].id)
+                      }
+                      console.log(imageIds);
+                      jQuery("#image-ids").val(imageIds);
+                    });
+
+                    frame.open();
                   }
+                },
+                {
+                  type: 'textbox',
+                  name: 'imageIds',
+                  id: 'image-ids',
+                  label: 'Image IDs'
                 }
               ],
               onsubmit: function(e) {
-                editor.insertContent('[rbm-gallery title="' + e.data.title + '" columns="' + e.data.columns + '" thumbnail="' + e.data.thumbnail + '" photos=""]');
+                editor.insertContent('[rbm-gallery title="' + e.data.title + '" columns="' + e.data.columns + '" thumbnail="' + e.data.thumbnail + '" photos="' + e.data.imageIds + '"]');
               }
             })
           }
