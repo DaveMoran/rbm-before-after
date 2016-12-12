@@ -1,5 +1,10 @@
 == Changelog ==
 
+= 0.7 =
+* Add ability to select number of columns for gallery
+* Support for 1-12 columns
+* Reset default values
+
 = 0.6 =
 * Add setting to change thumbnail size
 
